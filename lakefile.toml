@@ -1,0 +1,27 @@
+# OsiUbV2: Standalone Lean 4.33.1 formalization of the Upper-Bound side (Sections 1-7, pp. 1-40)
+# of Kijun's revised manuscript "Optimal Injectivity of the SparseStack"
+# (source/constant_injectivity_sparsestack-2.pdf, SHA-256 0fcf41b556c345609b17144961b536898f3248b5cc13f150d923b442672bef78).
+name = "osi_ub_v2"
+version = "0.2.0"
+defaultTargets = ["OsiUb"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[lean_lib]]
+name = "SparseFockFormal"
+srcDir = "vendor/heidary_formal"
+leanOptions = { autoImplicit = true, relaxedAutoImplicit = true }
+
+[[lean_lib]]
+name = "SparseStack"
+
+[[lean_lib]]
+name = "OsiUb"
+globs = ["OsiUb", "OsiUb.+"]
