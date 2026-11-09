@@ -1,10 +1,16 @@
+# Lean build artifacts & packages
 .lake/
-scratch/
+**/.lake/
 *.olean
 *.ilean
-argon_ledger.json
+**/*.olean
+**/*.ilean
 
-source/
-reviews/
-kit/
+# Temporary & cache files
+scratch/
+**/scratch/
+argon_ledger.json
 __pycache__/
+*.tar.gz
+*.tar.zst
+.DS_Store

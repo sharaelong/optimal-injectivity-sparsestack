@@ -1,0 +1,10 @@
+.lake/
+scratch/
+*.olean
+*.ilean
+argon_ledger.json
+
+source/
+reviews/
+kit/
+__pycache__/

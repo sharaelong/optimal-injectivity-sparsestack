@@ -1,0 +1,26 @@
+# OsiComplete: Unified Lean 4.33.1 formalization of "Optimal Injectivity of the SparseStack"
+# (constant_injectivity_sparsestack.pdf: Upper Bound Sections 1-7 + Lower Bound Sections 8-10).
+name = "osi_complete"
+version = "0.1.0"
+defaultTargets = ["Osi"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[lean_lib]]
+name = "SparseFockFormal"
+srcDir = "vendor/heidary_formal"
+leanOptions = { autoImplicit = true, relaxedAutoImplicit = true }
+
+[[lean_lib]]
+name = "SparseStack"
+
+[[lean_lib]]
+name = "Osi"
+globs = ["Osi.+"]
